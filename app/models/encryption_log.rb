@@ -1,0 +1,2 @@
+class EncryptionLog < ApplicationRecord
+end
