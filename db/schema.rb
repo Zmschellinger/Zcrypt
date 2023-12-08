@@ -14,8 +14,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_08_155456) do
   create_table "encryption_logs", force: :cascade do |t|
     t.string "filename"
     t.date "date"
+    t.text :body
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 end

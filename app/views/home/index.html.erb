@@ -1,2 +1,12 @@
-<h1>Hello World on Rails!</h1>
+<h1 style="text-align:center;">File Encryptor/Decryptor</h1>
 
+
+<ul>
+  <% @encryption_logs.each do |encryptionLog| %>
+    <li>
+        <a href = "/home/<%= encryptionLog.id %>">
+            <%= encryptionLog.filename %>
+        </a>
+    </li>
+  <% end %>
+</ul>
