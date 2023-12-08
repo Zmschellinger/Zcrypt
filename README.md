@@ -1,4 +1,4 @@
-# File-Encryptor
+# Zcrypt 
 
 Personal project creating a file encryption/decryption web app using rails 
 
