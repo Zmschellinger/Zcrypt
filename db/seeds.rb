@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+EncryptionLog.create(filename: "file1.txt", date:"12/1/2023", body: "this is a file i want to encrypt")
+EncryptionLog.create(filename: "file2.txt", date:"12/2/2023", body: "this is file 2")
+EncryptionLog.create(filename: "file3.txt", date:"12/2/2023", body: "this is file 3")
+
