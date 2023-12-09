@@ -11,7 +11,7 @@ Before you run:
 
 To Run:
 - rails server -b 0.0.0.0
-=======
+
 # README
 
 This README would normally document whatever steps are necessary to get the
