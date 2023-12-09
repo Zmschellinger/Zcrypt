@@ -3,6 +3,7 @@ class CreateEncryptionLogs < ActiveRecord::Migration[7.1]
     create_table :encryption_logs do |t|
       t.string :filename
       t.date :date
+      t.text :body
 
       t.timestamps
     end

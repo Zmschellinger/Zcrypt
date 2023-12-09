@@ -7,7 +7,7 @@ Rails version 7.1.2
 
 Before you run:
 - Bundle install
-- bin/rails db:migrate
+- bin/rails db:seed rake db:setup
 
 To Run:
 - rails server -b 0.0.0.0
