@@ -1,39 +1,28 @@
-<<<<<<< HEAD
-# Zcrypt 
+# ZCrypt - encryptor/decryptor
 
-Personal project creating a file encryption/decryption web app using rails.
+This is a personal project I have taken on in order to learn more about software development, the encryption/decryption process in a web application, and hopefully the creation of my own encryption algorithm that I can implment in the web app. 
 
-Rails version 7.1.2
 
-Before you run:
-- Bundle install
-- bin/rails db:seed rake db:setup
 
-To Run:
-- rails server -b 0.0.0.0
+## Authors
 
-# README
+- [@Zmschellinger](https://www.github.com/Zmschellinger)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Deployment
 
-* Ruby version
+To deploy this project run
 
-* System dependencies
+```bash
+  bundle install
+  rake db:seed
+  rake db:setup
+  rails server -b 0.0.0.0
+```
 
-* Configuration
 
-* Database creation
+## FAQ
 
-* Database initialization
+#### What verions of rails does this use?
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> e4caa72 (Skeleton code)
+Rails 7.1.2
