@@ -1,2 +1,7 @@
 <h1><%= @encryptionLog.filename %></h1>
 <p> <%= @encryptionLog.date %></p>
+<p> <%= @encryptionLog.body %></p>
+
+<ul>
+    <li><%= link_to "Edit", edit_home_path(@encryptionLog) %></li>
+</ul>

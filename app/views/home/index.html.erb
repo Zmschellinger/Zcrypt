@@ -1,12 +1,48 @@
 <h1 style="text-align:center;">File Encryptor/Decryptor</h1>
+<%= link_to 'Login', new_user_session_path, class: 'btn btn-primary', style: "display: block; margin: 20px auto; text-align: center; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;" %>
+<%= yield %>
 
-
-<ul>
-  <% @encryption_logs.each do |encryptionLog| %>
-    <li>
-        <a href = "/home/<%= encryptionLog.id %>">
-            <%= encryptionLog.filename %>
-        </a>
-    </li>
-  <% end %>
-</ul>
+<table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">File Name</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Date Submited</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @encryption_logs.each do |encryptionLog| %>
+      <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;"><%= encryptionLog.filename %></td>
+        <td style="border: 1px solid #ddd; padding: 8px;"><%= encryptionLog.date %></td>
+        <td style="border: 1px solid #ddd; padding: 8px;">
+          <%= button_to 'Remove', home_path(encryptionLog), 
+                        method: :destroy, 
+                        data: { confirm: 'Are you sure you want to remove this exercise?' }, 
+                        class: 'btn btn-danger', 
+                        form: { style: 'display: inline' } %>
+          <%= button_to 'Encrypt', home_path(encryptionLog), 
+                        method: :delete, 
+                        data: { confirm: 'Are you sure you want to remove this exercise?' }, 
+                        class: 'btn btn-danger', 
+                        form: { style: 'display: inline' } %>
+          <%= button_to 'Decrypt', home_path(encryptionLog), 
+                        method: :delete, 
+                        data: { confirm: 'Are you sure you want to remove this exercise?' }, 
+                        class: 'btn btn-danger', 
+                        form: { style: 'display: inline' } %>
+          <%= button_to 'Download', home_path(encryptionLog), 
+                        method: :delete, 
+                        data: { confirm: 'Are you sure you want to remove this exercise?' }, 
+                        class: 'btn btn-danger', 
+                        form: { style: 'display: inline' } %>
+          <%= button_to 'View', home_path(encryptionLog), 
+                        method: :show, 
+                        data: { confirm: 'Are you sure you want to remove this exercise?' }, 
+                        class: 'btn btn-danger', 
+                        form: { style: 'display: inline' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
